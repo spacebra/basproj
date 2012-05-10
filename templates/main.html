@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    Converter
+{% endblock %}
+{% block content %}
+    <form action="" method="GET">
+        {% csrf_token %}
+        {% for choice in form.list %}
+            {{ choice }}
+            <br/>
+        {% endfor %}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}
